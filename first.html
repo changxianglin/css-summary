@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css summary</title>
+  <style>
+    /* 单列布局 */
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    /* .header {
+        margin:0 auto; 
+        max-width: 960px;
+        height:100px;
+        background-color: blue;
+    }
+    .nav{
+      margin: 0 auto;
+      max-width: 800px;
+      background-color: darkgray;
+      height: 50px;
+    }
+    .content {
+        margin: 0 auto;
+        max-width: 960px;
+        height: 400px;
+        background-color: aquamarine;
+    }
+    .footer {
+        margin: 0 auto;
+        max-width: 960px;
+        height: 100px;
+        background-color: aqua;
+    } */
+
+    /* 两列自适应布局 */
+    .parent {
+      overflow: hidden;
+      zoom: 1;
+    }
+    .left {
+      float: left;
+      margin-right: 20px;
+    }
+    .right {
+      overflow: hidden;
+      zoom: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="header">
+    <div class="nav"></div>
+  </div>
+  <div class="content"></div>
+  <div class="footer"></div> -->
+
+
+  <div class="parent" style="background-color: lightgrey;">
+    <div class="left" style="background-color: lightblue;">
+        <p>left</p>
+    </div>
+    <div class="right"  style="background-color: lightgreen;">
+        <p>right</p>
+        <p>right</p>
+    </div>        
+</div>
+
+
+
+  <script src="dist/main.js"></script>
+</body>
+</html>
