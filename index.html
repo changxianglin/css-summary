@@ -6,110 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>css summary</title>
   <style>
+    /* 单列布局 */
     html,
     body {
+      width: 100%;
       height: 100%;
     }
-    /* 背景渐变 */
-    button {
-    background-image: linear-gradient(#5187c4, #1c2f45);
-    background-size: auto 200%;
-    background-position: 0 100%;
-    transition: background-position 0.5s;
-    }    
-    button:hover {
-        background-position: 0 0;
+    /* .header {
+        margin:0 auto; 
+        max-width: 960px;
+        height:100px;
+        background-color: blue;
     }
-    /* 盒子阴影 */
-    .box-shadow {
-        background-color: #FF8020;
-        width: 160px;
-        height: 90px;
-        margin-top: -45px;
-        margin-left: -80px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
+    .nav{
+      margin: 0 auto;
+      max-width: 800px;
+      background-color: darkgray;
+      height: 50px;
     }
-    .box-shadow:after {
-        content: "";
-        width: 150px;
-        height: 1px;
-        margin-top: 88px;
-        margin-left: -75px;
-        display: block;
-        position: absolute;
-        left: 50%;
-        z-index: -1;
-        -webkit-box-shadow: 0px 0px 8px 2px #000000;
-        -moz-box-shadow: 0px 0px 8px 2px #000000;
-        box-shadow: 0px 0px 8px 2px #000000;
+    .content {
+        margin: 0 auto;
+        max-width: 960px;
+        height: 400px;
+        background-color: aquamarine;
     }
-    /* 加载中 */
-    .loading:after {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: bottom;
-    animation: ellipsis 2s infinite;
-    content: "\2026"; /* ascii code for the ellipsis character */
-    }
-    @keyframes ellipsis {
-        from {
-            width: 2px;
-        }
-        to {
-            width: 15px;
-        }
-    }
-    /* 锚链接伪类 */
-    a:link { color: blue; }
-    a:visited { color: purple; }
-    a:hover { color: red; }
-    a:active { color: yellow; }
-    /* 强制出现滚动条 */
-    html { height: 101% }
+    .footer {
+        margin: 0 auto;
+        max-width: 960px;
+        height: 100px;
+        background-color: aqua;
+    } */
 
-    /* 内部CSS3 盒阴影 inset */
-    #mydiv { 
-      width: 100px;
-      height: 100px;
-      -moz-box-shadow: inset 2px 0 4px #000;
-      -webkit-box-shadow: inset 2px 0 4px #000;
-      box-shadow: inset 2px 0 4px #000;
+    /* 两列自适应布局 */
+    .parent {
+      overflow: hidden;
+      zoom: 1;
     }
-  /* 外部CSS3 盒阴影 */
-    #mydiv2 { 
-      width: 100px;
-      height: 100px;
-      -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
-      -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
-      box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+    .left {
+      float: left;
+      margin-right: 20px;
     }
-    /* CSS固定页脚 */
-    #footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    height: 30px;
-    width: 100%;
-    background: #444;
-  }
+    .right {
+      overflow: hidden;
+      zoom: 1;
+    }
   </style>
 </head>
 <body>
-  <script src="./dist/main.js"></script>
-  <button>123</button>
-  
-  <div class="box-shadow">
+  <!-- <div class="header">
+    <div class="nav"></div>
   </div>
+  <div class="content"></div>
+  <div class="footer"></div> -->
 
-  <div class="loading"></div>
 
-  <a href="http://www.sina.com.cn">sina</a>
+  <div class="parent" style="background-color: lightgrey;">
+    <div class="left" style="background-color: lightblue;">
+        <p>left</p>
+    </div>
+    <div class="right"  style="background-color: lightgreen;">
+        <p>right</p>
+        <p>right</p>
+    </div>        
+</div>
 
-  <div id="mydiv"></div>
 
-  <div id="mydiv2"></div>
-  <div id="footer"></div>
+
+  <script src="dist/main.js"></script>
 </body>
 </html>
