@@ -5,8 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>css summary</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    .element{
+        max-height:0;
+        overflow:hidden;
+        transition: height .25s;
+        background-color: beige;
+    }
+    .element.active {
+      background-color: red;
+        max-height: 666px; /* 一个足够大的最大高度值 */
+    }
+  </style>
 </head>
 <body>
+  <div class="element"></div>
   <script src="dist/main.js"></script>
 </body>
 </html>
